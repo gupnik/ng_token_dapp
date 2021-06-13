@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ng_token_dapp/static/css/main.d24cbb69.chunk.css",
+    "main.js": "/ng_token_dapp/static/js/main.78af8891.chunk.js",
+    "main.js.map": "/ng_token_dapp/static/js/main.78af8891.chunk.js.map",
+    "runtime-main.js": "/ng_token_dapp/static/js/runtime-main.00559d34.js",
+    "runtime-main.js.map": "/ng_token_dapp/static/js/runtime-main.00559d34.js.map",
+    "static/js/2.69b284e3.chunk.js": "/ng_token_dapp/static/js/2.69b284e3.chunk.js",
+    "static/js/2.69b284e3.chunk.js.map": "/ng_token_dapp/static/js/2.69b284e3.chunk.js.map",
+    "static/js/3.8ef53fed.chunk.js": "/ng_token_dapp/static/js/3.8ef53fed.chunk.js",
+    "static/js/3.8ef53fed.chunk.js.map": "/ng_token_dapp/static/js/3.8ef53fed.chunk.js.map",
+    "index.html": "/ng_token_dapp/index.html",
+    "static/css/main.d24cbb69.chunk.css.map": "/ng_token_dapp/static/css/main.d24cbb69.chunk.css.map",
+    "static/js/2.69b284e3.chunk.js.LICENSE.txt": "/ng_token_dapp/static/js/2.69b284e3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00559d34.js",
+    "static/js/2.69b284e3.chunk.js",
+    "static/css/main.d24cbb69.chunk.css",
+    "static/js/main.78af8891.chunk.js"
+  ]
+}
