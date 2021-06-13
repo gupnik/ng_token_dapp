@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Navbar, Container, Row, Col } from 'react-bootstrap';
 import Web3 from 'web3';
 import NGTokenABI from './abis/NGToken';
 
@@ -38,20 +38,27 @@ function App() {
   loadTokens();
 
   return (
-    <Container>
-      <Row>
-        <Col>Address</Col>
-        <Col>{address}</Col>
-      </Row>
-      <Row>
-        <Col>Ether</Col>
-        <Col>{etherBalance}</Col>
-      </Row>
-      <Row>
-        <Col>NGT</Col>
-        <Col>{tokens}</Col>
-      </Row>
-    </Container>
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home">NG Tokens</Navbar.Brand>
+        <Navbar.Collapse className="justify-content-end">
+          <Navbar.Text>
+             {address}
+          </Navbar.Text>
+        </Navbar.Collapse>
+      </Navbar>
+      <br />
+      <Container>
+        <Row>
+          <Col>Ether Balance: </Col>
+          <Col>{etherBalance}</Col>
+        </Row>
+        <Row>
+          <Col>NGT Balance: </Col>
+          <Col>{tokens}</Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
