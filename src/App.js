@@ -3,8 +3,16 @@ import { Navbar, Container, Row, Col, Button } from 'react-bootstrap';
 import Web3 from 'web3';
 import NGTokenABI from './abis/NGToken';
 
-let web3;
-let NGToken;
+const loadWeb3 = async () => {
+  if (window.ethereum) {
+    window.web3 = new Web3(window.ethereum);
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
+  } else if (window.web3) {
+    window.web3 = new Web3(window.web3.currentProvider)
+  } else {
+    window.alert('Non-Ethereum browser detected. Try installing MetaMask!');
+  }
+};
 
 function App() {
   const [address, setAddress] = useState('0x0');
@@ -12,30 +20,31 @@ function App() {
   const [tokens, setTokens] = useState(0);
 
   const loadEtherBalance = async (addr) => {
-    const balance = await web3.eth.getBalance(addr);
+    if (window.web3 === undefined) return;
+    const balance = await window.web3.eth.getBalance(addr);
     setEtherBalance(balance);
   };
 
   const loadTokens = async (addr) => {
-    const tokenBalance = await NGToken.methods.balanceOf(addr).call();
+    if (window.web3 === undefined) return;
+    const contractAddress = '0xc05aB6B5d736B2ee93bBCb70c8dC7dA4188b798A';
+    const tokenInstance = new window.web3.eth.Contract(NGTokenABI, contractAddress);
+    const tokenBalance = await tokenInstance.methods.balanceOf(addr).call();
     setTokens(tokenBalance);
   };
 
   const loadUser = async () => {
-    if (window.ethereum === undefined) return;
-    const accounts = await web3.eth.getAccounts();
+    if (window.web3 === undefined) return;
+    const accounts = await window.web3.eth.getAccounts();
     const account = accounts[0];
     setAddress(account);
     loadEtherBalance(account);
     loadTokens(account);
   };
   
-  const loadWeb3 = async () => {
-    web3 = new Web3(Web3.givenProvider);
-    const contractAddress = '0xc05aB6B5d736B2ee93bBCb70c8dC7dA4188b798A';
-    NGToken = new web3.eth.Contract(NGTokenABI, contractAddress);
-
-      loadUser();
+  const setup = async () => {
+    await loadWeb3();
+    await loadUser();
   };
 
   return (
@@ -49,7 +58,7 @@ function App() {
             {address}
           </Navbar.Text>
           : 
-          <Button type="submit" onClick={loadWeb3}>Submit</Button>
+          <Button type="submit" onClick={setup}>Connect</Button>
           }
         </Navbar.Collapse>
       </Navbar>
