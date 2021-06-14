@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ng_token_dapp/static/css/main.d24cbb69.chunk.css",
-    "main.js": "/ng_token_dapp/static/js/main.eb29bb9e.chunk.js",
-    "main.js.map": "/ng_token_dapp/static/js/main.eb29bb9e.chunk.js.map",
+    "main.js": "/ng_token_dapp/static/js/main.09a43d76.chunk.js",
+    "main.js.map": "/ng_token_dapp/static/js/main.09a43d76.chunk.js.map",
     "runtime-main.js": "/ng_token_dapp/static/js/runtime-main.6f8e54c0.js",
     "runtime-main.js.map": "/ng_token_dapp/static/js/runtime-main.6f8e54c0.js.map",
-    "static/js/2.6b6ac5dd.chunk.js": "/ng_token_dapp/static/js/2.6b6ac5dd.chunk.js",
-    "static/js/2.6b6ac5dd.chunk.js.map": "/ng_token_dapp/static/js/2.6b6ac5dd.chunk.js.map",
+    "static/js/2.5ed99996.chunk.js": "/ng_token_dapp/static/js/2.5ed99996.chunk.js",
+    "static/js/2.5ed99996.chunk.js.map": "/ng_token_dapp/static/js/2.5ed99996.chunk.js.map",
     "static/js/3.f955240e.chunk.js": "/ng_token_dapp/static/js/3.f955240e.chunk.js",
     "static/js/3.f955240e.chunk.js.map": "/ng_token_dapp/static/js/3.f955240e.chunk.js.map",
     "index.html": "/ng_token_dapp/index.html",
     "static/css/main.d24cbb69.chunk.css.map": "/ng_token_dapp/static/css/main.d24cbb69.chunk.css.map",
-    "static/js/2.6b6ac5dd.chunk.js.LICENSE.txt": "/ng_token_dapp/static/js/2.6b6ac5dd.chunk.js.LICENSE.txt"
+    "static/js/2.5ed99996.chunk.js.LICENSE.txt": "/ng_token_dapp/static/js/2.5ed99996.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6f8e54c0.js",
-    "static/js/2.6b6ac5dd.chunk.js",
+    "static/js/2.5ed99996.chunk.js",
     "static/css/main.d24cbb69.chunk.css",
-    "static/js/main.eb29bb9e.chunk.js"
+    "static/js/main.09a43d76.chunk.js"
   ]
 }
